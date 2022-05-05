@@ -58,7 +58,7 @@ int main() {
         DrawTexture(spr2.texture_, spr2.pos_x, spr2.pos_y, WHITE);
         EndMode2D();
 
-        DrawText("Move the Player with the Arrow Keys", 10, 10, 30, LIGHTGRAY);
+        DrawText("KILL GOD!!!!!!!", 10, 10, 30, LIGHTGRAY);
 
 
         EndDrawing();
