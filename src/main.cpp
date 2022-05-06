@@ -39,7 +39,7 @@ int main() {
         // Updates that are made by frame are coded here
         // ...
         // ...
-        //Steuerung
+        //Steuerung WASD
         if (IsKeyDown(KEY_D)) spr.pos_x += 2.0f;
         if (IsKeyDown(KEY_A)) spr.pos_x -= 2.0f;
         if (IsKeyDown(KEY_W)) spr.pos_y -= 2.0f;
