@@ -25,6 +25,7 @@ int main() {
     Game::Sprite spr(playerPosition.x, playerPosition.y, myTexture);
     Game::Sprite spr2(100, 100, "assets/graphics/Charakter_Vorschlag_vorne_laufen1.png");
 
+    //Kamera Einstellung
     Camera2D camera = { 0 };
     camera.target = Vector2{ spr.pos_x + 20.0f, spr.pos_y + 20.0f };
     camera.offset = Vector2{ Game::ScreenWidth / 2.0f, Game::ScreenHeight / 2.0f };
@@ -38,10 +39,11 @@ int main() {
         // Updates that are made by frame are coded here
         // ...
         // ...
-        if (IsKeyDown(KEY_RIGHT)) spr.pos_x += 2.0f;
-        if (IsKeyDown(KEY_LEFT)) spr.pos_x -= 2.0f;
-        if (IsKeyDown(KEY_UP)) spr.pos_y -= 2.0f;
-        if (IsKeyDown(KEY_DOWN)) spr.pos_y += 2.0f;
+        //Steuerung
+        if (IsKeyDown(KEY_D)) spr.pos_x += 2.0f;
+        if (IsKeyDown(KEY_A)) spr.pos_x -= 2.0f;
+        if (IsKeyDown(KEY_W)) spr.pos_y -= 2.0f;
+        if (IsKeyDown(KEY_S)) spr.pos_y += 2.0f;
 
         camera.target = Vector2{ spr.pos_x + 20.0f, spr.pos_y + 20.0f };
 
