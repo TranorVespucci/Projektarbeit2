@@ -11,6 +11,7 @@ namespace Game
 		int pos_x;
 		int pos_y;
 		Texture2D texture_;
+		
 
 		Sprite() = delete;
 
