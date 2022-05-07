@@ -1,6 +1,7 @@
 #pragma once
 #include "raylib.h"
 #include <string>
+#include "Nemo.h"
 
 
 namespace Game
@@ -11,6 +12,7 @@ namespace Game
 		int pos_x;
 		int pos_y;
 		Texture2D texture_;
+		Nemo nemo_;
 		
 
 		Sprite() = delete;

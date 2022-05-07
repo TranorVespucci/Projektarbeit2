@@ -1,8 +1,8 @@
-AYO LET'S ROCK THIS MOFO!!!!!
+***			Projektarbeit 2			***
+*** Custodia - gefangen in der Zeit ***
 
+Coder: Görkem, Nicolas
+In this Project we'll programm a 2D Top Down Dungeon Crawler.
+More details will follow...
 
-
-
-CHAMPAIGN!!!! (Even though I don´t drink Alcohol)
-
-And I don't usually Paryt :D
+What the hell in the .gitignore its more than I've ever seen :0

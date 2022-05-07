@@ -23,7 +23,8 @@ Game::Sprite::Sprite(int pos_X, int pos_Y, const char* filename)
 
 Game::Sprite::~Sprite()
 {
-    TraceLog(LOG_INFO, "Willst du meine Sarah Connor sein?");
+    TraceLog(LOG_INFO, "Custodia - gefangen in der Zeit");
+    TraceLog(LOG_INFO, "Custodia - trapped in time");
     UnloadTexture(texture_);
 }
 
