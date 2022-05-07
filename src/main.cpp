@@ -19,12 +19,12 @@ int main() {
 
     Vector2 playerPosition = { Game::ScreenWidth / 2, Game::ScreenHeight / 2 };
 
-#ifdef GAME_START_FULLSCREEN 
-    ToggleFullscreen();
+#ifdef GAME_START_FULLSCREEN //ToggleFullscreen(); not working @todo when press K it changes from fullscreen to windowed mode
+    /*ToggleFullscreen();
     if (IsKeyPressed(KEY_K)) {
         ToggleFullscreen();
-    }
-    //ToggleFullscreen(); not working @todo when press K it changes from fullscreen to windowed mode
+    }*/
+    
 
 #endif 
 
@@ -65,7 +65,7 @@ int main() {
     {
 
         if (IsKeyDown(KEY_D)) {                     //run right
-            spr.pos_x += 2.0f;
+            spr.pos_x += 1.0f;
 
             framesCounter++;
 
@@ -81,7 +81,7 @@ int main() {
         }
 
         if (IsKeyDown(KEY_A)) {                     //run left
-            spr.pos_x -= 2.0f;
+            spr.pos_x -= 1.0f;
 
             framesCounter++;
 
@@ -97,7 +97,7 @@ int main() {
         }
 
         if (IsKeyDown(KEY_W)) {                     //run forwards
-            spr.pos_y -= 2.0f;
+            spr.pos_y -= 1.0f;
 
             framesCounter++;
 
@@ -113,7 +113,7 @@ int main() {
         }
 
         if (IsKeyDown(KEY_S)) {                     //run backwards
-            spr.pos_y += 2.0f;
+            spr.pos_y += 1.0f;
 
             framesCounter++;
 
@@ -141,24 +141,31 @@ int main() {
 
         //@todo when WASD not pressed display nemo standing, when WASD pressed delete nemo standing and draw animation
 
-        if ((!IsKeyDown(KEY_W)) || (!IsKeyDown(KEY_S)) || (!IsKeyDown(KEY_D)) || (!IsKeyDown(KEY_A))) {
+        //if ((!IsKeyDown(KEY_W)) || (!IsKeyDown(KEY_S)) || (!IsKeyDown(KEY_D)) || (!IsKeyDown(KEY_A))) { 
 
-            DrawTextureRec(NemoFr, frameRec, position, WHITE);        // standing animation i dont have that yet
+        
 
-
-            if (IsKeyDown(KEY_W)) {
-                DrawTextureRec(NemoBk, frameRec, position, WHITE);    // Draw nemo animation backwards          
+        
+            if (IsKeyDown(KEY_W));          
+            {                
+                DrawTextureRec(NemoBk, frameRec, position, WHITE);    // Draw nemo animation backwards               
             }
+            
+
             if (IsKeyDown(KEY_S)) {
-                DrawTextureRec(NemoFr, frameRec, position, WHITE);    // Draw nemo animation forwards
+                DrawTextureRec(NemoFr, frameRec, position, WHITE);    // Draw nemo animation forwards               
             }
-            if (IsKeyDown(KEY_D)) {
-                DrawTextureRec(NemoR, frameRec, position, WHITE);      // Draw nemo animation right 
+
+            
+            if (IsKeyDown(KEY_D)) {               
+                DrawTextureRec(NemoR, frameRec, position, WHITE);      // Draw nemo animation right                
             }
+           
+
             if (IsKeyDown(KEY_A)) {
-                DrawTextureRec(NemoL, frameRec, position, WHITE);      // Draw nemo animation left
+                DrawTextureRec(NemoL, frameRec, position, WHITE);      // Draw nemo animation left                
             }
-        }
+            
 
 
         // controlls description
