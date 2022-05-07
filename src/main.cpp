@@ -39,6 +39,11 @@ int main() {
 
     // Camera lock, moves with player 
     Camera2D camera = { 0 };    
+    Game::Sprite spr(playerPosition.x, playerPosition.y, myTexture);
+    Game::Sprite spr2(100, 100, "assets/graphics/Charakter_Vorschlag_vorne_laufen1.png");
+
+    //Kamera Einstellung
+    Camera2D camera = { 0 };
     camera.target = Vector2{ spr.pos_x + 20.0f, spr.pos_y + 20.0f };
     camera.offset = Vector2{ Game::ScreenWidth / 2.0f, Game::ScreenHeight / 2.0f };
     camera.zoom = 2.0f;
@@ -62,11 +67,13 @@ int main() {
     {
 
         // Updates that are made by frame are coded here
-       
-        if (IsKeyDown(KEY_D)) spr.pos_x += 2.0f;    //run right
-        if (IsKeyDown(KEY_A)) spr.pos_x -= 2.0f;    //run left
-        if (IsKeyDown(KEY_W)) spr.pos_y -= 2.0f;    //run forwards
-        if (IsKeyDown(KEY_S)) spr.pos_y += 2.0f;    //run backwards       
+        // ...
+        // ...
+        //Steuerung WASD I love this shit.
+        if (IsKeyDown(KEY_D)) spr.pos_x += 2.0f;
+        if (IsKeyDown(KEY_A)) spr.pos_x -= 2.0f;
+        if (IsKeyDown(KEY_W)) spr.pos_y -= 2.0f;
+        if (IsKeyDown(KEY_S)) spr.pos_y += 2.0f;
 
         camera.target = Vector2{ spr.pos_x + 20.0f, spr.pos_y + 20.0f };
 
@@ -93,19 +100,7 @@ int main() {
         DrawTexture(Map, 0, 0, WHITE);       
         EndMode2D();
 
-        /*
-        *
-        *
-        */
-
-        DrawTextureRec(Nemo, frameRec, position, WHITE);  // Draw part of the texture
-        
-         /*
-          *
-          *             
-          */       
-
-        // controlls description
+        DrawText("KILL GOD!!!!!!!", 10, 10, 30, LIGHTGRAY);
 
         DrawText("Move the Player with W,A,S,D", 10, 10, 20, LIGHTGRAY);  // x, y , size of text       
         DrawText("To exit the game press ESC", 10, 40, 20, LIGHTGRAY);  
